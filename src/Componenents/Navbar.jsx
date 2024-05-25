@@ -4,9 +4,10 @@ import Button from "../layouts/Button";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-import rgslogo from "../assets/img/rgslogo.jpeg";
-import {Link} from 'react-router-dom'
-import {Link as LinkScroll} from 'react-scroll'
+import logo from "../assets/img/logo.jpg";
+import { Link } from 'react-router-dom'
+import { Link as LinkScroll } from 'react-scroll'
+
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
@@ -21,13 +22,16 @@ const Navbar = () => {
   return (
     <div className=" fixed w-full">
       <div>
-        <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        <div className=" flex flex-row justify-between p-0.1 md:px-32 px-5 bg-white">
           <div className=" flex flex-row items-center cursor-pointer">
             <span>
               {/* <BiRestaurant size={30} /> */}
             </span>
-            {/* <h1 className=" text-xl font-semibold">FoodieWeb</h1> */}
-            <img src={rgslogo} alt="img"  className=" flex flex-col md:flex-row gap-5 mt-5 bg-white"/>
+            <img src={logo} alt="img" className=" flex flex-col md:flex-row gap- mt-2  bg-white w-6 h-10 " />
+            <h1 className=" text-xl font-semibold  p-3" text-red-700 >Desi <br /> Delights </h1>
+           
+            
+
           </div>
 
           <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8">
@@ -122,14 +126,26 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to="review"
+              to="Login"
               spy={true}
               smooth={true}
               duration={500}
               className="hover:text-brightColor transition-all cursor-pointer"
             >
-              Reviews
+              Login
             </Link>
+
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              Contact
+            </Link>
+
+
 
             <Button title="Login" />
           </nav>
@@ -143,9 +159,8 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={` ${
-            menu ? "translate-x-0" : "-translate-x-full"
-          } lg:hidden flex flex-col absolute bg-black text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300`}
+          className={` ${menu ? "translate-x-0" : "-translate-x-full"
+            } lg:hidden flex flex-col absolute bg-black text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300`}
         >
           <Link
             to="/"
@@ -195,8 +210,27 @@ const Navbar = () => {
             className=" hover:text-brightColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
-            Reviews
+            Login
           </Link>
+
+          <Link
+            to="menu"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="hover:text-brightColor transition-all cursor-pointer"
+            onClick={closeMenu}
+          >
+            ContactForm
+          </Link>
+
+
+
+
+
+
+
+
 
           <Button title="login" />
         </div>

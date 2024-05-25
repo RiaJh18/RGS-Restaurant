@@ -9,7 +9,7 @@ import DishesCard from "../layouts/DishesCard";
 
 const Dishes = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center items-center lg:px-32 px-5" id="dishes">
+    <div className="  min-h-screen flex flex-col justify-center items-center lg:px-32 px-5" id="dishes">
       <h1 className=" text-4xl font-semibold text-center pt-24 pb-10">
         Our Dishes
       </h1>

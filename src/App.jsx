@@ -18,9 +18,14 @@ import About from "./Componenents/About";
 import Menu from "./Componenents/Menu";
 import Footer from "./Componenents/Footer";
 import Dishes from "./Componenents/Dishes";
-import Reviews from "./Componenents/Review";
-import Review from "./Componenents/Review";
+import Reviews from "./Componenents/Login";
+
+
 import { Route, Routes } from "react-router-dom";
+
+import LoginForm from "./Componenents/Login";
+import ContactForm from "./Componenents/ContactForm";
+
 
 const App = () => {
   return (
@@ -33,10 +38,39 @@ const App = () => {
 
 <Route path="/menu" element={<Menu/>}/>
 
+<Route path="Login" element ={<LoginForm/>}/>
+
+
+
+
 </Routes>
+
+
+
+
+
+    <div className="App">
+      <header className="App-header">
+        {/* <h1>My Contact Form</h1> */}
+        <ContactForm />
+      </header>
+    </div>
+
       <Footer />
     </div>
   );
+
+
+  <div className="App">
+      <header className="App-header">
+        <LoginForm />
+      </header>
+    </div>
+
+
+  
+
+  
 };
 
 export default App;
